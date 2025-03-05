@@ -229,6 +229,7 @@ header button:hover {
     flex-direction: column;
     justify-content: center;
     gap: 15px;
+    align-items: center;
 }
 
 .features-box {
@@ -238,6 +239,7 @@ header button:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     transition: all 0.3s ease-in-out;
+    width: 90%;
 }
 
 .text {
@@ -402,5 +404,9 @@ header button:hover {
     .features-right {
         margin: 0 15px;
         font-size: 14px;
+    }
+
+    .features-box {
+        width: 100%;
     }
 }
