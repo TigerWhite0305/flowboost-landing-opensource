@@ -225,13 +225,60 @@ header button:hover {
 /* Sezione destra con testo */
 .features-right {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
 }
 
-.box{
+.features-box {
     background: linear-gradient(135deg,  rgba(108,92,231,0.15) 0%,rgba(9,132,227,0.15) 100%); 
     padding: 15px;
     border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
 
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.text h3 {
+    margin: 0 10px;
+    flex-grow: 1;
+}
+
+.arrow {
+    width: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    padding: 0 15px; /* Padding orizzontale, 0 verticale inizialmente */
+    border-top: 1px solid #ddd; /* Optional: bordo superiore */
+}
+
+.dropdown-content p {
+    margin: 10px 0;
+    color: #636E72;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+}
+
+.features-box.open .dropdown-content {
+    max-height: 200px; /* Imposta un'altezza abbastanza grande per mostrare il testo */
+    padding: 10px 15px; /* Aggiunge padding quando aperto */
+}
+
+.features-box.open .arrow {
+    transform: rotate(90deg);
 }
 
 .text{
@@ -241,6 +288,12 @@ header button:hover {
     align-items: center;
 }
 
+.text-align{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
 /* Responsività per schermi più piccoli */
 @media (max-width: 768px) {
     body{
@@ -334,5 +387,20 @@ header button:hover {
 
     .small-images {
         justify-content: center;
+    }
+
+    .image-grid .large {
+        width: 150px;
+        height: 291px;
+    }
+
+    .small-images img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .features-right {
+        margin: 0 15px;
+        font-size: 14px;
     }
 }

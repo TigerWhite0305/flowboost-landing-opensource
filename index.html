@@ -53,15 +53,57 @@
                     </div>
                 </div>
             </div>
-             <div class="features-right">
-                <div class="box">
+            <div class="features-right">
+                <div class="features-box" onclick="toggleDropdown(this)">
                     <div class="text">
-                        <img src="assets/icon/brain.svg" alt="">
-                        <h3>Automazione Intelligente</h3>
-                        <img src="assets/icon/arrow.svg" alt="">
+                        <div class="text-align">
+                            <img src="assets/icon/brain.svg" alt="">
+                            <h3>Automazione Intelligente</h3>
+                        </div>
+                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
+                    </div>
+                    <div class="dropdown-content">
+                        <p>FlowBoost utilizza l’intelligenza artificiale per identificare e automatizzare le attività ripetitive nel tuo flusso di lavoro. Grazie a regole personalizzabili, puoi creare automazioni che eliminano il lavoro manuale e riducono gli errori. Che si tratti di inviare email, aggiornare database o gestire task, FlowBoost rende tutto più veloce e preciso. Il risultato? Più tempo per le attività strategiche e meno noie operative.</p>
                     </div>
                 </div>
-             </div>
+                <div class="features-box" onclick="toggleDropdown(this)">
+                    <div class="text">
+                        <div class="text-align">
+                            <img src="assets/icon/analyst.svg" alt="">
+                            <h3>Analisi in Tempo Reale</h3>
+                        </div>
+                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
+                    </div>
+                    <div class="dropdown-content">
+                        <p>Ottieni insight dettagliati sulle tue attività con analisi basate sull’AI. FlowBoost raccoglie e interpreta i dati delle tue operazioni, fornendo suggerimenti per ottimizzare il tempo e migliorare la produttività. Grazie a dashboard intuitive e report automatizzati, puoi monitorare le prestazioni in tempo reale. Questo ti permette di prendere decisioni informate e migliorare continuamente il tuo workflow.</p>
+                    </div>
+                </div>
+                <div class="features-box" onclick="toggleDropdown(this)">
+                    <div class="text">
+                        <div class="text-align">
+                            <img src="assets/icon/puzzle.svg" alt="">
+                            <h3>Integrazione con i tuoi Strumenti</h3>
+                        </div>
+                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
+                    </div>
+                    <div class="dropdown-content">
+                        <p>FlowBoost si integra perfettamente con le piattaforme che già usi, come Slack, Trello, Google Calendar, Notion e molte altre. Connetti i tuoi strumenti preferiti in pochi clic e sincronizza automaticamente i dati tra di essi. Niente più passaggi manuali o perdita di informazioni: tutto viene aggiornato in tempo reale, mantenendo il tuo team sempre allineato e operativo.</p>
+                    </div>
+                </div>
+                <div class="features-box " onclick="toggleDropdown(this)">
+                    <div class="text">
+                        <div class="text-align">
+                            <img src="assets/icon/interface.svg" alt="">
+                            <h3>Interfaccia Intuitiva</h3>
+                        </div>
+                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
+                    </div>
+                    <div class="dropdown-content">
+                        <p>Un design pulito e minimalista rende FlowBoost facile da usare per chiunque, senza bisogno di formazione avanzata. La piattaforma è progettata per essere intuitiva, con un’esperienza utente fluida e reattiva. Grazie a un’interfaccia chiara e accessibile, puoi configurare automazioni, visualizzare report e gestire attività in pochi secondi. Il tuo lavoro diventa più semplice e organizzato, senza complicazioni.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -78,6 +120,13 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('open'); // Aggiunge o rimuove la classe "open"
         });
+    </script>
+
+    <script>
+        function toggleDropdown(element) {
+        const box = element.closest(".features-box");
+        box.classList.toggle("open");
+}
     </script>
 </body>
 </html>
