@@ -162,6 +162,85 @@ header button:hover {
     border-radius: 20px; /* Rende l'overlay arrotondato come l'immagine */
 }
 
+.text-center-box{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.text-center-box h2{
+    font-size: 32px;
+    color: #2D3436;
+    margin-bottom: 5px;
+}
+
+.text-center-box p{
+    font-size: 18px;
+    color: #636E72;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+.features{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+}
+
+/* Sezione sinistra con immagini */
+.features-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.image-grid .large {
+    width: 300px;
+    height: 582px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.small-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.small-images img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Sezione destra con testo */
+.features-right {
+    flex: 1;
+}
+
+.box{
+    background: linear-gradient(135deg,  rgba(108,92,231,0.15) 0%,rgba(9,132,227,0.15) 100%); 
+    padding: 15px;
+    border-radius: 15px;
+
+}
+
+.text{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
 /* Responsività per schermi più piccoli */
 @media (max-width: 768px) {
     body{
@@ -242,5 +321,18 @@ header button:hover {
     .hero .right img {
         width: 80%; /* L'immagine occupa l'80% della larghezza disponibile su dispositivi piccoli */
         height: auto; /* Altezza automatica per mantenere le proporzioni */
+    }
+
+    .features {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .features-left {
+        justify-content: center;
+    }
+
+    .small-images {
+        justify-content: center;
     }
 }
