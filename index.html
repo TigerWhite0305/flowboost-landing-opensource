@@ -112,6 +112,65 @@
         <p>Automatizza il tuo workflow in pochi passaggi, senza codice.</p>
     </div>
 
+    <section class="timeline">
+        <div class="progress-bar">
+            <div class="progress-bar-fill"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content left-img">
+                <img src="assets/icon/1.svg" alt="Icona 1">
+            </div>
+            <div class="timeline-content right">
+                <h2>1</h2>
+                <h3>Automazione Intelligente</h3>
+                <p>FlowBoost si integra con le tue app preferite come Slack, Trello, Google Calendar e molte altre. Puoi connettere tutto in pochi clic, senza bisogno di codice. Una volta collegati, i dati verranno sincronizzati automaticamente.</p>
+            </div>
+            <div class="circle"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content left">
+                <h2>2</h2>
+                <h3>Configura il tuo workflow</h3>
+                <p>Imposta le automazioni scegliendo le azioni e le condizioni che devono attivarle. Usa un'interfaccia intuitiva per creare flussi su misura per il tuo lavoro. Puoi personalizzare ogni passaggio in base alle tue esigenze.</p>
+            </div>
+            <div class="timeline-content right">
+                <img src="assets/icon/2.svg" alt="Icona 2">
+            </div>
+            <div class="circle"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content left-img">
+                <img src="assets/icon/3.svg" alt="Icona 3">
+            </div>
+            <div class="timeline-content right">
+                <h2>3</h2>
+                <h3>Lascia fare tutto all'AI</h3>
+                <p>FlowBoost esegue automaticamente le operazioni, eliminando attività ripetitive e riducendo gli errori. Ogni flusso di lavoro viene ottimizzato per essere più rapido ed efficiente. Tu devi solo concentrarti sulle cose più importanti.</p>
+            </div>
+            <div class="circle"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content left">
+                <h2>3</h2>
+                <h3>Monitora e ottimizza</h3>
+                <p>Accedi a dashboard interattive per visualizzare i tuoi workflow in azione. Controlla i dati in tempo reale e apporta modifiche per migliorare l’efficienza. Grazie ai suggerimenti AI, puoi ottimizzare ogni processo.</p>
+            </div>
+            <div class="timeline-content right">
+                <img src="assets/icon/4.svg" alt="Icona 4">
+            </div>
+            <div class="circle"></div>
+        </div>
+        <div class="timeline-item">
+            <div class="circle"></div>
+        </div>
+    </section>
+
+    <div class="text-center-box">
+        <h2>Cosa dicono di noi</h2>
+        <p>Scopri come FlowBoost ha migliorato il lavoro di aziende e professionisti.</p>
+    </div>
+    
+
     <script>
         // Aggiungi l'evento per l'hamburger menu
         const hamburger = document.getElementById('hamburger');
@@ -125,9 +184,56 @@
     <script>
         function toggleDropdown(element) {
         const box = element.closest(".features-box");
-        box.classList.toggle("open");
-}
+        box.classList.toggle("open");}
     </script>
+
+<script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const progressBarFill = document.querySelector(".progress-bar-fill");
+    const circles = document.querySelectorAll(".circle");
+    const timeline = document.querySelector(".timeline");
+
+    let progress = 0; // Inizializza la progressione lenta
+
+    function updateProgressBar() {
+        let timelineRect = timeline.getBoundingClientRect();
+        let timelineHeight = timeline.offsetHeight;
+        let windowHeight = window.innerHeight;
+
+        // Calcola la percentuale di progresso rispetto alla timeline
+        let targetProgress = (windowHeight - timelineRect.top) / timelineHeight;
+        targetProgress = Math.min(Math.max(targetProgress, 0), 1); // Clamp tra 0 e 1
+
+        // Rallenta il movimento della barra
+        progress += (targetProgress - progress) * 0.05; // 0.05 rende il movimento molto più lento
+        progressBarFill.style.height = (progress * 100) + "%";
+
+        // Sincronizza i pallini con la barra
+        circles.forEach(circle => {
+            let circleTop = circle.getBoundingClientRect().top + window.scrollY;
+            let progressHeight = progressBarFill.offsetHeight + timeline.getBoundingClientRect().top;
+
+            if (progressHeight >= circleTop) {
+                circle.classList.add("active");
+            } else {
+                circle.classList.remove("active");
+            }
+        });
+
+        requestAnimationFrame(updateProgressBar); // Assicura fluidità dell'animazione
+    }
+
+    updateProgressBar(); // Avvia il ciclo di animazione continua
+});
+
+
+
+
+</script>
+
+
 </body>
 </html>
 
