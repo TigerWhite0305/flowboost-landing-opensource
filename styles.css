@@ -296,6 +296,17 @@ header button:hover {
     align-items: center;
     gap: 10px;
 }
+
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
 /* Responsività per schermi più piccoli */
 @media (max-width: 768px) {
     body{

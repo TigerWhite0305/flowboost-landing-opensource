@@ -2,238 +2,468 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>FlowBoost</title>
+
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+     <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <img src="assets/icon/Logo.svg" alt="Logo">
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Caratteristiche</a></li>
-                <li><a href="#">Come Funziona?</a></li>
-                <li><a href="#">Testimonianze</a></li>
-            </ul>
-        </nav>
-        <button>PROVA ORA</button>
-        <!-- Hamburger Icon -->
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
+  <!-- Preloader Start  -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- /Preloader End -->
 
-    <div class="hero">
-        <div class="left">
-            <h1>Massimizza la Produttività  del Tuo Team</h1>
-            <p>Automatizza i tuoi flussi di lavoro con l'intelligenza artificiale. FlowBoost ti aiuta a ottimizzare il tempo e concentrarti su ciò che conta davvero.</p>
-            <button>Scopri di più</button>
+  <!-- Header Area  -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <a href="index.html" class="logo">
+              <img src="assets/images/logo.svg" alt="Chain App Dev">
+            </a>
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Caratteristiche</a></li>
+              <li class="scroll-to-section"><a href="#about">Come Funziona?</a></li>
+              <li class="scroll-to-section"><a href="#testimonials">Testimonianze</a></li>
+              <li class="scroll-to-section"><a href="#contact">contatti</a></li>
+              <li><div class="gradient-button"><a  href="#modal">PROVA ORA</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+          </nav>
         </div>
-        <div class="right">
-            <div class="overlay"></div> <!-- Overlay aggiunto -->
-            <img src="assets/img/Hero-Image.jpg" alt="Illustrazione Hero">
+      </div>
+    </div>
+  </header>
+  <!--/ Header Area  -->
+
+
+  <!-- Main Banner -->
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-6 align-self-center">
+              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Massimizza la Produttività  del Tuo Team</h2>
+                    <p>Automatizza i tuoi flussi di lavoro con l'intelligenza artificiale. FlowBoost ti aiuta a ottimizzare il tempo e concentrarti su ciò che conta davvero.</p>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="white-button first-button scroll-to-section">
+                      <a href="#contact">Scopri di più </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                <img src="assets/images/slider-dec.jpg" alt="">
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+  <!-- /Main Banner -->
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section light-background">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Cosa dicono di noi</h2>
+      <p>Scopri come FlowBoost ha migliorato il lavoro di aziende e professionisti.</p>
     </div>
 
-    <section>
-        <div class="text-center-box">
-            <h2>Perché FlowBoost?</h2>
-            <p>Automazione intelligente per lavorare meglio e più velocemente.</p>
-        </div>
-        <div class="features">
-             <div class="features-left">
-                <div class="image-grid">
-                    <img src="assets/img/characteristics-img-3.jpg" alt="Foto 1" class="large">
-                     <div class="small-images">
-                        <img src="assets/img/characteristics-img-1.jpg" alt="Foto 2">
-                        <img src="assets/img/characteristics-img-2.jpg" alt="Foto 3">
-                    </div>
-                </div>
-            </div>
-            <div class="features-right">
-                <div class="features-box" onclick="toggleDropdown(this)">
-                    <div class="text">
-                        <div class="text-align">
-                            <img src="assets/icon/brain.svg" alt="">
-                            <h3>Automazione Intelligente</h3>
-                        </div>
-                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
-                    </div>
-                    <div class="dropdown-content">
-                        <p>FlowBoost utilizza l’intelligenza artificiale per identificare e automatizzare le attività ripetitive nel tuo flusso di lavoro. Grazie a regole personalizzabili, puoi creare automazioni che eliminano il lavoro manuale e riducono gli errori. Che si tratti di inviare email, aggiornare database o gestire task, FlowBoost rende tutto più veloce e preciso. Il risultato? Più tempo per le attività strategiche e meno noie operative.</p>
-                    </div>
-                </div>
-                <div class="features-box" onclick="toggleDropdown(this)">
-                    <div class="text">
-                        <div class="text-align">
-                            <img src="assets/icon/analyst.svg" alt="">
-                            <h3>Analisi in Tempo Reale</h3>
-                        </div>
-                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
-                    </div>
-                    <div class="dropdown-content">
-                        <p>Ottieni insight dettagliati sulle tue attività con analisi basate sull’AI. FlowBoost raccoglie e interpreta i dati delle tue operazioni, fornendo suggerimenti per ottimizzare il tempo e migliorare la produttività. Grazie a dashboard intuitive e report automatizzati, puoi monitorare le prestazioni in tempo reale. Questo ti permette di prendere decisioni informate e migliorare continuamente il tuo workflow.</p>
-                    </div>
-                </div>
-                <div class="features-box" onclick="toggleDropdown(this)">
-                    <div class="text">
-                        <div class="text-align">
-                            <img src="assets/icon/puzzle.svg" alt="">
-                            <h3>Integrazione con i tuoi Strumenti</h3>
-                        </div>
-                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
-                    </div>
-                    <div class="dropdown-content">
-                        <p>FlowBoost si integra perfettamente con le piattaforme che già usi, come Slack, Trello, Google Calendar, Notion e molte altre. Connetti i tuoi strumenti preferiti in pochi clic e sincronizza automaticamente i dati tra di essi. Niente più passaggi manuali o perdita di informazioni: tutto viene aggiornato in tempo reale, mantenendo il tuo team sempre allineato e operativo.</p>
-                    </div>
-                </div>
-                <div class="features-box " onclick="toggleDropdown(this)">
-                    <div class="text">
-                        <div class="text-align">
-                            <img src="assets/icon/interface.svg" alt="">
-                            <h3>Interfaccia Intuitiva</h3>
-                        </div>
-                        <img src="assets/icon/arrow.svg" alt="" class="arrow">
-                    </div>
-                    <div class="dropdown-content">
-                        <p>Un design pulito e minimalista rende FlowBoost facile da usare per chiunque, senza bisogno di formazione avanzata. La piattaforma è progettata per essere intuitiva, con un’esperienza utente fluida e reattiva. Grazie a un’interfaccia chiara e accessibile, puoi configurare automazioni, visualizzare report e gestire attività in pochi secondi. Il tuo lavoro diventa più semplice e organizzato, senza complicazioni.</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+    <div class="container">
+      <div class="row g-5">
 
-    <div class="text-center-box">
-        <h2>Come funziona FlowBoost?</h2>
-        <p>Automatizza il tuo workflow in pochi passaggi, senza codice.</p>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <h3>Giulia R.</h3>
+            <h4>Project Manager</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Automatizzare i processi aziendali ci ha fatto risparmiare ore di lavoro ogni settimana. L’integrazione con i nostri strumenti è stata immediata!</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+            <h3>Luca T.</h3>
+            <h4>CEO di una startup</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Con FlowBoost, il mio team distribuito riesce a collaborare in modo più fluido. I flussi di lavoro automatici ci fanno risparmiare tempo prezioso!</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <h3>Alessandra P.</h3>
+            <h4>Digital Marketer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Automatizzare la gestione dei lead e delle campagne pubblicitarie è stato un gioco da ragazzi. L’interfaccia è intuitiva e veloce!.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Marco D.</h3>
+            <h4>Analista di dati</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>FlowBoost ci offre insight chiari e dettagliati. Grazie ai report automatizzati, possiamo ottimizzare i nostri processi senza fatica!.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <h3>Serena M.</h3>
+            <h4>Freelance & Consultant</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Essendo una freelance, avere un tool che organizza il mio lavoro in automatico è fondamentale. Adoro la semplicità di FlowBoost!</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="testimonial-item">
+            <img src="assets/images/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <h3>Daniele F.</h3>
+            <h4>CTO di una tech company</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>Abbiamo testato tanti strumenti, ma FlowBoost è quello che ci ha permesso di scalare senza problemi. Lo consiglio a chiunque!</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <section class="timeline">
-        <div class="progress-bar">
-            <div class="progress-bar-fill"></div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-content left-img">
-                <img src="assets/icon/1.svg" alt="Icona 1">
-            </div>
-            <div class="timeline-content right">
-                <h2>1</h2>
-                <h3>Automazione Intelligente</h3>
-                <p>FlowBoost si integra con le tue app preferite come Slack, Trello, Google Calendar e molte altre. Puoi connettere tutto in pochi clic, senza bisogno di codice. Una volta collegati, i dati verranno sincronizzati automaticamente.</p>
-            </div>
-            <div class="circle"></div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-content left">
-                <h2>2</h2>
-                <h3>Configura il tuo workflow</h3>
-                <p>Imposta le automazioni scegliendo le azioni e le condizioni che devono attivarle. Usa un'interfaccia intuitiva per creare flussi su misura per il tuo lavoro. Puoi personalizzare ogni passaggio in base alle tue esigenze.</p>
-            </div>
-            <div class="timeline-content right">
-                <img src="assets/icon/2.svg" alt="Icona 2">
-            </div>
-            <div class="circle"></div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-content left-img">
-                <img src="assets/icon/3.svg" alt="Icona 3">
-            </div>
-            <div class="timeline-content right">
-                <h2>3</h2>
-                <h3>Lascia fare tutto all'AI</h3>
-                <p>FlowBoost esegue automaticamente le operazioni, eliminando attività ripetitive e riducendo gli errori. Ogni flusso di lavoro viene ottimizzato per essere più rapido ed efficiente. Tu devi solo concentrarti sulle cose più importanti.</p>
-            </div>
-            <div class="circle"></div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-content left">
-                <h2>3</h2>
-                <h3>Monitora e ottimizza</h3>
-                <p>Accedi a dashboard interattive per visualizzare i tuoi workflow in azione. Controlla i dati in tempo reale e apporta modifiche per migliorare l’efficienza. Grazie ai suggerimenti AI, puoi ottimizzare ogni processo.</p>
-            </div>
-            <div class="timeline-content right">
-                <img src="assets/icon/4.svg" alt="Icona 4">
-            </div>
-            <div class="circle"></div>
-        </div>
-        <div class="timeline-item">
-            <div class="circle"></div>
-        </div>
-    </section>
+  </section>
+  <!-- /Testimonials Section -->
 
-    <div class="text-center-box">
-        <h2>Cosa dicono di noi</h2>
-        <p>Scopri come FlowBoost ha migliorato il lavoro di aziende e professionisti.</p>
+
+  <!-- Call To Action -->
+  <section id="call-to-action-2" class="call-to-action-2 section dark-background">
+
+    <!-- Overlay -->
+    <div class="overlay-cta"></div>
+    <!-- /Overlay -->
+    <div class="container" style="position: relative; z-index: 1;">
+      <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="col-xl-10">
+          <div class="text-center">
+            <h3>Automatizza il tuo workflow oggi stesso!</h3>
+            <p>Semplifica il tuo lavoro, elimina le attività ripetitive e ottimizza il tuo tempo con FlowBoost. Unisciti a migliaia di professionisti che hanno già trasformato la loro produttività.</p>
+            <a class="cta-btn" href="#">PROVA ORA</a>
+          </div>
+        </div>
+      </div>
     </div>
-    
 
-    <script>
-        // Aggiungi l'evento per l'hamburger menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.querySelector('.nav-links');
+  </section>
+  <!-- /Call To Action -->
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('open'); // Aggiunge o rimuove la classe "open"
-        });
-    </script>
 
-    <script>
-        function toggleDropdown(element) {
-        const box = element.closest(".features-box");
-        box.classList.toggle("open");}
-    </script>
+  <!-- Faq Section -->
+  <section class="faq-9 faq section light-background" id="faq">
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-5" data-aos="fade-up">
+          <h2 class="faq-title">Hai una domanda? Consulta le FAQ</h2>
+          <p class="faq-description">Hai qualche dubbio? Qui trovi le risposte alle domande più frequenti che ci vengono poste.</p>
+          <div class="faq-arrow d-none d-lg-block" data-aos="fade-up" data-aos-delay="200">
+            <svg class="faq-arrow" width="200" height="211" viewBox="0 0 200 211" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M198.804 194.488C189.279 189.596 179.529 185.52 169.407 182.07L169.384 182.049C169.227 181.994 169.07 181.939 168.912 181.884C166.669 181.139 165.906 184.546 167.669 185.615C174.053 189.473 182.761 191.837 189.146 195.695C156.603 195.912 119.781 196.591 91.266 179.049C62.5221 161.368 48.1094 130.695 56.934 98.891C84.5539 98.7247 112.556 84.0176 129.508 62.667C136.396 53.9724 146.193 35.1448 129.773 30.2717C114.292 25.6624 93.7109 41.8875 83.1971 51.3147C70.1109 63.039 59.63 78.433 54.2039 95.0087C52.1221 94.9842 50.0776 94.8683 48.0703 94.6608C30.1803 92.8027 11.2197 83.6338 5.44902 65.1074C-1.88449 41.5699 14.4994 19.0183 27.9202 1.56641C28.6411 0.625793 27.2862 -0.561638 26.5419 0.358501C13.4588 16.4098 -0.221091 34.5242 0.896608 56.5659C1.8218 74.6941 14.221 87.9401 30.4121 94.2058C37.7076 97.0203 45.3454 98.5003 53.0334 98.8449C47.8679 117.532 49.2961 137.487 60.7729 155.283C87.7615 197.081 139.616 201.147 184.786 201.155L174.332 206.827C172.119 208.033 174.345 211.287 176.537 210.105C182.06 207.125 187.582 204.122 193.084 201.144C193.346 201.147 195.161 199.887 195.423 199.868C197.08 198.548 193.084 201.144 195.528 199.81C196.688 199.192 197.846 198.552 199.006 197.935C200.397 197.167 200.007 195.087 198.804 194.488ZM60.8213 88.0427C67.6894 72.648 78.8538 59.1566 92.1207 49.0388C98.8475 43.9065 106.334 39.2953 114.188 36.1439C117.295 34.8947 120.798 33.6609 124.168 33.635C134.365 33.5511 136.354 42.9911 132.638 51.031C120.47 77.4222 86.8639 93.9837 58.0983 94.9666C58.8971 92.6666 59.783 90.3603 60.8213 88.0427Z" fill="currentColor"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div class="col-lg-7" data-aos="fade-up" data-aos-delay="300">
+          <div class="faq-container">
+
+            <div class="faq-item faq-active">
+              <h3>FlowBoost è gratuito?</h3>
+              <div class="faq-content">
+                <p>Sì! Puoi iniziare gratuitamente con tutte le funzionalità base. Se hai bisogno di strumenti avanzati, puoi passare a un piano premium in qualsiasi momento.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+            <div class="faq-item">
+              <h3>Devo inserire la carta di credito per registrarmi?</h3>
+              <div class="faq-content">
+                <p>No, la registrazione è completamente gratuita e non richiede una carta di credito.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+            <div class="faq-item">
+              <h3>FlowBoost funziona su tutti i dispositivi?</h3>
+              <div class="faq-content">
+                <p>Sì! FlowBoost è accessibile da qualsiasi browser su desktop, tablet e smartphone senza bisogno di installare nulla.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+            <div class="faq-item">
+              <h3>Posso annullare il mio abbonamento in qualsiasi momento?</h3>
+              <div class="faq-content">
+                <p>Assolutamente sì! Se decidi di non usare più FlowBoost, puoi annullare il tuo abbonamento in pochi clic senza penali.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+            <div class="faq-item">
+              <h3>FlowBoost è sicuro?</h3>
+              <div class="faq-content">
+                <p>Sì, prendiamo molto sul serio la sicurezza. Tutti i tuoi dati sono criptati e protetti con le migliori tecnologie disponibili.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+            <div class="faq-item">
+              <h3>Come posso contattare il supporto?</h3>
+              <div class="faq-content">
+                <p>Il nostro team è sempre pronto ad aiutarti! Puoi contattarci via email o attraverso la chat dal vivo direttamente nella piattaforma.</p>
+              </div>
+              <i class="faq-toggle bi bi-chevron-right"></i>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /Faq Section -->
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section light-background">
+
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contatti</h2>
+      <p>Siamo qui per ascoltarti e rispondere a ogni tua domanda. Non esitare a metterti in contatto con noi!</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row g-4 g-lg-5">
+        <div class="col-lg-5">
+          <div class="info-box" data-aos="fade-up" data-aos-delay="200">
+            <h3>Info</h3>
+            <p>Ecco dove puoi trovarci e come contattarci direttamente. Siamo sempre felici di rispondere alle tue richieste.</p>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <div class="content">
+                <h4>Dove Siamo</h4>
+                <p>A108 Adam Street</p>
+                <p>New York, NY 535022</p>
+              </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon-box">
+                <i class="bi bi-telephone"></i>
+              </div>
+              <div class="content">
+                <h4>Numeri di telefono</h4>
+                <p>+1 5589 55488 55</p>
+                <p>+1 6678 254445 41</p>
+              </div>
+            </div>
+
+            <div class="info-item" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+              <div class="content">
+                <h4>Email</h4>
+                <p>info@example.com</p>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
+            <h3>Contattaci</h3>
+            <p>Hai domande o vuoi collaborare con noi? Compila il modulo qui sotto o inviaci un'email: ti risponderemo il prima possibile..</p>
+
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Nome" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                </div>
+
+                <div class="col-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Oggetto" required="">
+                </div>
+
+                <div class="col-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Messaggio" required=""></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <div class="loading">Caricamento</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Il tuo messaggio è stato inviato. Grazie!</div>
+                  <button type="submit" class="btn">Invia</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+  <!-- /Contact Section -->
+
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <img src="assets/images/Logo.svg" alt="">
+          </a>
+          <div class="footer-contact pt-3">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-3 footer-links">
+          <h4>Collegamenti</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#top">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#services">Caratteristiche</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#about">Come Funziona?</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#testimonials">Testimonianze</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#contact">contatti</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Seguici</h4>
+          <p>Seguici sui nostri canali per restare aggiornato.</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">FlowBoost</strong> <span>All Rights Reserved</span></p>
+    </div>
+
+  </footer>
+  <!-- /Footer Section -->
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ <!-- Scripts -->
+<script src="assets/jquery/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/animation.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const progressBarFill = document.querySelector(".progress-bar-fill");
-    const circles = document.querySelectorAll(".circle");
-    const timeline = document.querySelector(".timeline");
-
-    let progress = 0; // Inizializza la progressione lenta
-
-    function updateProgressBar() {
-        let timelineRect = timeline.getBoundingClientRect();
-        let timelineHeight = timeline.offsetHeight;
-        let windowHeight = window.innerHeight;
-
-        // Calcola la percentuale di progresso rispetto alla timeline
-        let targetProgress = (windowHeight - timelineRect.top) / timelineHeight;
-        targetProgress = Math.min(Math.max(targetProgress, 0), 1); // Clamp tra 0 e 1
-
-        // Rallenta il movimento della barra
-        progress += (targetProgress - progress) * 0.05; // 0.05 rende il movimento molto più lento
-        progressBarFill.style.height = (progress * 100) + "%";
-
-        // Sincronizza i pallini con la barra
-        circles.forEach(circle => {
-            let circleTop = circle.getBoundingClientRect().top + window.scrollY;
-            let progressHeight = progressBarFill.offsetHeight + timeline.getBoundingClientRect().top;
-
-            if (progressHeight >= circleTop) {
-                circle.classList.add("active");
-            } else {
-                circle.classList.remove("active");
-            }
-        });
-
-        requestAnimationFrame(updateProgressBar); // Assicura fluidità dell'animazione
-    }
-
-    updateProgressBar(); // Avvia il ciclo di animazione continua
-});
-
-
-
-
+  AOS.init();
 </script>
-
-
 </body>
 </html>
-
